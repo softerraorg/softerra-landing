@@ -9,7 +9,7 @@ export default function Stats() {
     { value: 6, suffix: "+", label: "Years Shopify only" },
   ];
   return (
-    <section className="relative border-y border-white/5 py-20">
+    <section className="relative border-y border-fg/5 py-20">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-12 px-8 md:grid-cols-4">
         {stats.map((s, i) => (
           <motion.div
@@ -22,7 +22,7 @@ export default function Stats() {
             <div className="font-serif text-5xl text-[#8B7BFF] md:text-6xl">
               <Counter value={s.value} suffix={s.suffix} />
             </div>
-            <div className="mt-3 text-xs uppercase tracking-[0.2em] text-white/40">{s.label}</div>
+            <div className="mt-3 text-xs uppercase tracking-[0.2em] text-fg/40">{s.label}</div>
           </motion.div>
         ))}
       </div>

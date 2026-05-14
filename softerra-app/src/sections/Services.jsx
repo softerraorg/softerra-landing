@@ -21,18 +21,18 @@ export default function Services() {
           className="mb-16 max-w-2xl"
         >
           <div className="mb-4 text-xs uppercase tracking-[0.3em] text-[#8B7BFF]">What we do</div>
-          <h2 className="font-serif text-5xl leading-tight text-white md:text-6xl">
+          <h2 className="font-serif text-5xl leading-tight text-fg md:text-6xl">
             Shopify development.{" "}
-            <span className="italic text-white/40" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="italic text-fg/40" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               And the engineering around it.
             </span>
           </h2>
-          <p className="mt-6 text-white/50">
+          <p className="mt-6 text-fg/50">
             We do not take WordPress projects or Webflow jobs. We work one hundred percent inside Shopify and the custom layers that wrap around it. Next.js. Supabase. AWS. The full stack when your business outgrows a theme.
           </p>
         </motion.div>
 
-        <div className="grid gap-px overflow-hidden rounded-2xl border border-white/5 bg-white/5 md:grid-cols-3">
+        <div className="grid gap-px overflow-hidden rounded-2xl border border-fg/5 bg-fg/5 md:grid-cols-3">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -40,15 +40,15 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.5 }}
-              className="group relative bg-[#0a0a0f] p-8 transition-all hover:bg-[#13101f]"
+              className="group relative bg-surface p-8 transition-all hover:bg-surface-2"
             >
               <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg border border-[#6B5BFF]/30 bg-[#6B5BFF]/10 text-[#8B7BFF] transition-all group-hover:bg-[#6B5BFF]/20 group-hover:scale-110">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                 </svg>
               </div>
-              <h3 className="mb-3 text-lg text-white">{s.title}</h3>
-              <p className="text-sm leading-relaxed text-white/50">{s.desc}</p>
+              <h3 className="mb-3 text-lg text-fg">{s.title}</h3>
+              <p className="text-sm leading-relaxed text-fg/50">{s.desc}</p>
               <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-[#6B5BFF] to-transparent transition-all duration-500 group-hover:w-full" />
             </motion.div>
           ))}

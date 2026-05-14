@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import Aurora from "../components/Aurora";
 import { useRef } from "react";
+import Aurora from "../components/Aurora";
 import { fadeUp, stagger } from "../lib/motion";
 // ---------- Hero ----------
 export default function Hero() {
@@ -27,7 +27,7 @@ export default function Hero() {
           variants={stagger}
           initial="hidden"
           animate="visible"
-          className="font-serif text-[clamp(3rem,8vw,7.5rem)] leading-[0.95] tracking-tight text-white"
+          className="font-serif text-[clamp(3rem,8vw,7.5rem)] leading-[0.95] tracking-tight text-fg"
         >
           <motion.span variants={fadeUp} transition={{ duration: 0.8 }} className="block">
             We build Shopify
@@ -45,7 +45,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-10 max-w-xl text-base leading-relaxed text-white/60"
+          className="mt-10 max-w-xl text-base leading-relaxed text-fg/60"
         >
           Softerra is a six person development team based in Islamabad. We work with direct to consumer brands across the United States and Europe on custom themes. Conversion focused development. Full stack engineering for platforms like Allstora.
         </motion.p>
@@ -65,7 +65,7 @@ export default function Hero() {
           </a>
           <a
             href="#case-study"
-            className="rounded-full border border-white/20 px-8 py-4 text-sm text-white/80 transition-all hover:border-white/40 hover:text-white"
+            className="rounded-full border border-fg/20 px-8 py-4 text-sm text-fg/80 transition-all hover:border-fg/40 hover:text-fg"
           >
             View our work
           </a>
@@ -76,7 +76,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-white/30"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-fg/30"
       >
         Scroll
       </motion.div>

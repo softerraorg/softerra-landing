@@ -19,14 +19,14 @@ export default function CTA() {
           transition={{ duration: 0.8 }}
         >
           <div className="mb-6 text-xs uppercase tracking-[0.3em] text-[#8B7BFF]">Ready to start</div>
-          <h2 className="font-serif text-5xl leading-tight text-white md:text-7xl">
+          <h2 className="font-serif text-5xl leading-tight text-fg md:text-7xl">
             Tell us about your{" "}
             <span className="italic text-[#8B7BFF]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Shopify project
             </span>
             <span className="text-[#6B5BFF]">.</span>
           </h2>
-          <p className="mt-8 text-white/60">
+          <p className="mt-8 text-fg/60">
             Share your project details and we will review them and suggest a clear next step within 24 hours. No pressure and no obligation.
           </p>
           <motion.a

@@ -57,10 +57,10 @@ export default function SelectedWork() {
           className="mb-16"
         >
           <div className="mb-4 text-xs uppercase tracking-[0.3em] text-[#8B7BFF]">Case studies</div>
-          <h2 className="font-serif text-5xl text-white md:text-6xl">
+          <h2 className="font-serif text-5xl text-fg md:text-6xl">
             Work we have shipped<span className="text-[#6B5BFF]">.</span>
           </h2>
-          <p className="mt-6 max-w-xl text-white/50">
+          <p className="mt-6 max-w-xl text-fg/50">
             A closer look at recent projects. Custom apps, membership systems, bundle builders, and full storefront builds for direct to consumer brands.
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ export default function SelectedWork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: i * 0.05 }}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-fg/10"
             >
               <div className={`relative bg-gradient-to-br ${p.gradient} p-8 md:p-10`}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -88,15 +88,15 @@ export default function SelectedWork() {
                   </motion.div>
                 </div>
               </div>
-              <div className="flex flex-1 flex-col bg-[#0a0a0f] p-6">
+              <div className="flex flex-1 flex-col bg-surface p-6">
                 <div className="mb-2 text-xs uppercase tracking-[0.2em] text-[#8B7BFF]/70">
                   {p.name} · Case
                 </div>
-                <h3 className="mb-3 text-xl text-white">{p.subtitle}</h3>
-                <p className="mb-6 text-sm leading-relaxed text-white/50">{p.desc}</p>
+                <h3 className="mb-3 text-xl text-fg">{p.subtitle}</h3>
+                <p className="mb-6 text-sm leading-relaxed text-fg/50">{p.desc}</p>
                 <div className="mt-auto flex flex-wrap gap-2">
                   {p.tags.map((t) => (
-                    <span key={t} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/60">
+                    <span key={t} className="rounded-full border border-fg/10 bg-fg/5 px-3 py-1 text-xs text-fg/60">
                       {t}
                     </span>
                   ))}
@@ -110,13 +110,13 @@ export default function SelectedWork() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-12 rounded-2xl border border-white/10 bg-white/[0.02] p-8"
+          className="mt-12 rounded-2xl border border-fg/10 bg-fg/[0.02] p-8"
         >
-          <div className="mb-3 text-xs uppercase tracking-[0.2em] text-white/40">And many more</div>
-          <p className="text-sm leading-relaxed text-white/70">
+          <div className="mb-3 text-xs uppercase tracking-[0.2em] text-fg/40">And many more</div>
+          <p className="text-sm leading-relaxed text-fg/70">
             Texas Gift Baskets · GrayLabs · Herban Hemp · CruiseMap · DeVaultClub · Navico Health · Katarina Djordjic.
           </p>
-          <p className="mt-2 text-sm text-white/50">
+          <p className="mt-2 text-sm text-fg/50">
             Over 500 brands served across direct to consumer and business to business and fashion and beauty and food and beverage and supplement verticals.
           </p>
         </motion.div>

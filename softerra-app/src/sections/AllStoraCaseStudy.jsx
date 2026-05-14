@@ -17,8 +17,8 @@ export default function AllstoraCaseStudy() {
   ];
 
   return (
-    <section id="case-study" className="relative overflow-hidden border-t border-white/5 py-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0d0a1f] to-[#0a0a0f]" />
+    <section id="case-study" className="relative overflow-hidden border-t border-fg/5 py-32">
+      <div className="absolute inset-0 bg-gradient-to-b from-bg via-surface-2 to-bg" />
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -37,10 +37,10 @@ export default function AllstoraCaseStudy() {
             <span className="h-1.5 w-1.5 rounded-full bg-[#6B5BFF] animate-pulse" />
             Featured engagement · Ongoing
           </div>
-          <h2 className="font-serif text-6xl leading-none text-white md:text-7xl">
+          <h2 className="font-serif text-6xl leading-none text-fg md:text-7xl">
             Allstora<span className="text-[#6B5BFF]">.</span>
           </h2>
-          <p className="mt-6 max-w-2xl text-lg text-white/60">
+          <p className="mt-6 max-w-2xl text-lg text-fg/60">
             A community driven LGBTQ books marketplace. Engineered end to end. Not a Shopify theme. A fully custom Next.js application that uses Shopify as a commerce engine while keeping its own Supabase database for everything Shopify cannot model natively.
           </p>
         </motion.div>
@@ -59,20 +59,20 @@ export default function AllstoraCaseStudy() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-[#0a0a0f] p-8"
+              className="bg-surface p-8"
             >
               <div className="font-serif text-5xl text-[#8B7BFF]">
                 <Counter value={s.value} suffix={s.suffix} />
               </div>
-              <div className="mt-2 text-xs uppercase tracking-[0.2em] text-white/40">{s.label}</div>
+              <div className="mt-2 text-xs uppercase tracking-[0.2em] text-fg/40">{s.label}</div>
             </motion.div>
           ))}
         </div>
 
         {/* Workstreams */}
         <div className="mt-16">
-          <h3 className="mb-2 font-serif text-3xl text-white">Workstreams shipped to production</h3>
-          <p className="mb-10 text-white/50">A snapshot of work delivered through weekly cadence across the past months.</p>
+          <h3 className="mb-2 font-serif text-3xl text-fg">Workstreams shipped to production</h3>
+          <p className="mb-10 text-fg/50">A snapshot of work delivered through weekly cadence across the past months.</p>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {workstreams.map((w, i) => (
               <motion.div
@@ -82,14 +82,14 @@ export default function AllstoraCaseStudy() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
                 whileHover={{ y: -4 }}
-                className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] p-6 transition-all hover:border-[#6B5BFF]/40 hover:bg-[#6B5BFF]/5"
+                className="group relative overflow-hidden rounded-xl border border-fg/10 bg-fg/[0.02] p-6 transition-all hover:border-[#6B5BFF]/40 hover:bg-[#6B5BFF]/5"
               >
                 <div className="mb-4 flex items-center justify-between">
                   <div className="text-xs uppercase tracking-[0.2em] text-[#8B7BFF]/60">Workstream</div>
-                  <div className="text-xs text-white/40">{w.repos} {w.repos === 1 ? "repo" : "repos"}</div>
+                  <div className="text-xs text-fg/40">{w.repos} {w.repos === 1 ? "repo" : "repos"}</div>
                 </div>
-                <h4 className="mb-3 text-lg text-white">{w.title}</h4>
-                <p className="text-sm leading-relaxed text-white/50">{w.desc}</p>
+                <h4 className="mb-3 text-lg text-fg">{w.title}</h4>
+                <p className="text-sm leading-relaxed text-fg/50">{w.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -102,7 +102,7 @@ export default function AllstoraCaseStudy() {
           viewport={{ once: true }}
           className="mt-16"
         >
-          <div className="mb-6 text-xs uppercase tracking-[0.3em] text-white/40">Powered by</div>
+          <div className="mb-6 text-xs uppercase tracking-[0.3em] text-fg/40">Powered by</div>
           <div className="flex flex-wrap gap-2">
             {techStack.map((tech, i) => (
               <motion.span
@@ -111,7 +111,7 @@ export default function AllstoraCaseStudy() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.03 }}
-                className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-white/70"
+                className="rounded-full border border-fg/10 bg-fg/5 px-4 py-1.5 text-xs text-fg/70"
               >
                 {tech}
               </motion.span>

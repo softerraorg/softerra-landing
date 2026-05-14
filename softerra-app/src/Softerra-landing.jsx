@@ -24,12 +24,12 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 export default function SofterraLanding() {
   return (
     <div
-      className="min-h-screen bg-[#0a0a0f] text-white"
+      className="min-h-screen bg-bg text-fg"
       style={{ fontFamily: "'Inter', -apple-system, system-ui, sans-serif" }}
     >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap');
-        body { background: #0a0a0f; }
+        body { background: var(--bg); }
         .font-serif { font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif; }
         ::selection { background: rgba(107, 91, 255, 0.4); color: white; }
         html { scroll-behavior: smooth; }
