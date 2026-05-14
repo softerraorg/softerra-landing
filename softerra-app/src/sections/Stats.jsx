@@ -9,13 +9,14 @@ export default function Stats() {
     { value: 6, suffix: "+", label: "Years Shopify only" },
   ];
   return (
-    <section className="relative border-y border-fg/5 py-20">
+    <section className="relative border-y border-fg/5 py-14">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-12 px-8 md:grid-cols-4">
         {stats.map((s, i) => (
           <motion.div
             key={s.label}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -4 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
           >

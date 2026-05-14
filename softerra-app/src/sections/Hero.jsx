@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Aurora from "../components/Aurora";
+import MagneticButton from "../components/MagneticButton";
 import { fadeUp, stagger } from "../lib/motion";
 // ---------- Hero ----------
 export default function Hero() {
@@ -34,7 +35,7 @@ export default function Hero() {
           </motion.span>
           <motion.span variants={fadeUp} transition={{ duration: 0.8 }} className="block">
             stores that{" "}
-            <span className="italic text-[#8B7BFF]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="italic text-[#8B7BFF]">
               actually sell
             </span>
             <span className="text-[#6B5BFF]">.</span>
@@ -56,19 +57,19 @@ export default function Hero() {
           transition={{ delay: 1, duration: 0.8 }}
           className="mt-12 flex flex-wrap gap-4"
         >
-          <a
+          <MagneticButton
             href="#contact"
             className="group relative overflow-hidden rounded-full bg-[#6B5BFF] px-8 py-4 text-sm font-medium text-white"
           >
             <span className="relative z-10">Start a project →</span>
             <span className="absolute inset-0 bg-gradient-to-r from-[#8B7BFF] to-[#6B5BFF] opacity-0 transition-opacity group-hover:opacity-100" />
-          </a>
-          <a
+          </MagneticButton>
+          <MagneticButton
             href="#case-study"
             className="rounded-full border border-fg/20 px-8 py-4 text-sm text-fg/80 transition-all hover:border-fg/40 hover:text-fg"
           >
             View our work
-          </a>
+          </MagneticButton>
         </motion.div>
       </motion.div>
 
@@ -78,7 +79,13 @@ export default function Hero() {
         transition={{ delay: 1.4 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-fg/30"
       >
-        Scroll
+        <motion.span
+          className="block"
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+        >
+          Scroll
+        </motion.span>
       </motion.div>
     </section>
   );

@@ -11,7 +11,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="relative py-32">
+    <section id="services" className="relative py-20">
       <div className="mx-auto max-w-7xl px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function Services() {
           <div className="mb-4 text-xs uppercase tracking-[0.3em] text-[#8B7BFF]">What we do</div>
           <h2 className="font-serif text-5xl leading-tight text-fg md:text-6xl">
             Shopify development.{" "}
-            <span className="italic text-fg/40" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="italic text-fg/40">
               And the engineering around it.
             </span>
           </h2>
@@ -38,9 +38,10 @@ export default function Services() {
               key={s.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.5 }}
-              className="group relative bg-surface p-8 transition-all hover:bg-surface-2"
+              className="group relative bg-surface p-8 transition-colors hover:bg-surface-2"
             >
               <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg border border-[#6B5BFF]/30 bg-[#6B5BFF]/10 text-[#8B7BFF] transition-all group-hover:bg-[#6B5BFF]/20 group-hover:scale-110">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

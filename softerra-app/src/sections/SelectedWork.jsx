@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import TiltCard from "../components/TiltCard";
 
 // ---------- Selected Work / Case Studies ----------
 export default function SelectedWork() {
@@ -48,7 +49,7 @@ export default function SelectedWork() {
   ];
 
   return (
-    <section id="work" className="relative py-32">
+    <section id="work" className="relative py-20">
       <div className="mx-auto max-w-7xl px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,44 +66,44 @@ export default function SelectedWork() {
           </p>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2" style={{ perspective: "1000px" }}>
           {projects.map((p, i) => (
-            <motion.div
-              key={p.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: i * 0.05 }}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-fg/10"
-            >
-              <div className={`relative bg-gradient-to-br ${p.gradient} p-8 md:p-10`}>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="relative z-10">
-                  <motion.div
-                    className="font-serif text-4xl italic text-white/80 md:text-5xl"
-                    style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                    whileHover={{ x: 10 }}
-                    transition={{ type: "spring", stiffness: 200 }}
-                  >
-                    {p.name}
-                  </motion.div>
+            <TiltCard key={p.name} className="h-full">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: i * 0.05 }}
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-fg/10"
+              >
+                <div className={`relative bg-gradient-to-br ${p.gradient} p-8 md:p-10`}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <div className="relative z-10">
+                    <motion.div
+                      className="font-serif text-4xl italic text-white/80 md:text-5xl"
+                      whileHover={{ x: 10 }}
+                      transition={{ type: "spring", stiffness: 200 }}
+                    >
+                      {p.name}
+                    </motion.div>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-1 flex-col bg-surface p-6">
-                <div className="mb-2 text-xs uppercase tracking-[0.2em] text-[#8B7BFF]/70">
-                  {p.name} · Case
+                <div className="flex flex-1 flex-col bg-surface p-6">
+                  <div className="mb-2 text-xs uppercase tracking-[0.2em] text-[#8B7BFF]/70">
+                    {p.name} · Case
+                  </div>
+                  <h3 className="mb-3 text-xl text-fg">{p.subtitle}</h3>
+                  <p className="mb-6 text-sm leading-relaxed text-fg/50">{p.desc}</p>
+                  <div className="mt-auto flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <span key={t} className="rounded-full border border-fg/10 bg-fg/5 px-3 py-1 text-xs text-fg/60">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="mb-3 text-xl text-fg">{p.subtitle}</h3>
-                <p className="mb-6 text-sm leading-relaxed text-fg/50">{p.desc}</p>
-                <div className="mt-auto flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <span key={t} className="rounded-full border border-fg/10 bg-fg/5 px-3 py-1 text-xs text-fg/60">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </TiltCard>
           ))}
         </div>
 

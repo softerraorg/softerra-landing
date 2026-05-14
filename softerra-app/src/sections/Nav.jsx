@@ -27,19 +27,26 @@ export default function Nav() {
         </div>
         <div className="hidden gap-10 text-sm tracking-wide text-fg/60 md:flex">
           {["Services", "Work", "Case Study", "Reviews"].map((item) => (
-            <a key={item} href={`#${item.toLowerCase().replace(" ", "-")}`} className="hover:text-fg transition-colors">
+            <a
+              key={item}
+              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              className="group relative transition-colors hover:text-fg"
+            >
               {item}
+              <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#6B5BFF] transition-transform duration-300 group-hover:scale-x-100" />
             </a>
           ))}
         </div>
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <a
+          <motion.a
             href="#contact"
-            className="group relative overflow-hidden rounded-full border border-[#6B5BFF]/40 bg-[#6B5BFF]/10 px-5 py-2.5 text-sm text-fg transition-all hover:bg-[#6B5BFF]/20"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="group relative overflow-hidden rounded-full border border-[#6B5BFF]/40 bg-[#6B5BFF]/10 px-5 py-2.5 text-sm text-fg transition-colors hover:bg-[#6B5BFF]/20"
           >
             <span className="relative z-10">Start a project →</span>
-          </a>
+          </motion.a>
         </div>
       </div>
     </motion.nav>

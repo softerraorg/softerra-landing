@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
+import MagneticButton from "../components/MagneticButton";
+
 export default function CTA() {
   return (
-    <section id="contact" className="relative overflow-hidden py-32">
+    <section id="contact" className="relative overflow-hidden py-20">
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 opacity-50"
+        <motion.div
+          className="absolute inset-0"
           style={{
             background:
               "radial-gradient(ellipse at center, rgba(107,91,255,0.2), transparent 60%), radial-gradient(circle at 20% 50%, rgba(61,46,156,0.3), transparent 40%)",
           }}
+          animate={{ opacity: [0.4, 0.65, 0.4], scale: [1, 1.08, 1] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
       <div className="relative z-10 mx-auto max-w-3xl px-8 text-center">
@@ -21,7 +25,7 @@ export default function CTA() {
           <div className="mb-6 text-xs uppercase tracking-[0.3em] text-[#8B7BFF]">Ready to start</div>
           <h2 className="font-serif text-5xl leading-tight text-fg md:text-7xl">
             Tell us about your{" "}
-            <span className="italic text-[#8B7BFF]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="italic text-[#8B7BFF]">
               Shopify project
             </span>
             <span className="text-[#6B5BFF]">.</span>
@@ -29,14 +33,12 @@ export default function CTA() {
           <p className="mt-8 text-fg/60">
             Share your project details and we will review them and suggest a clear next step within 24 hours. No pressure and no obligation.
           </p>
-          <motion.a
+          <MagneticButton
             href="#"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
             className="mt-10 inline-block rounded-full bg-[#6B5BFF] px-10 py-5 text-sm font-medium text-white shadow-[0_0_40px_rgba(107,91,255,0.4)] transition-shadow hover:shadow-[0_0_60px_rgba(107,91,255,0.6)]"
           >
             Hire us on Upwork →
-          </motion.a>
+          </MagneticButton>
         </motion.div>
       </div>
     </section>

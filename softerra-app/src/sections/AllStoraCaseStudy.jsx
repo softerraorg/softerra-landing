@@ -17,7 +17,7 @@ export default function AllstoraCaseStudy() {
   ];
 
   return (
-    <section id="case-study" className="relative overflow-hidden border-t border-fg/5 py-32">
+    <section id="case-study" className="relative overflow-hidden border-t border-fg/5 py-20">
       <div className="absolute inset-0 bg-gradient-to-b from-bg via-surface-2 to-bg" />
       <div
         className="absolute inset-0 opacity-30"
@@ -57,6 +57,7 @@ export default function AllstoraCaseStudy() {
               key={s.label}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
+              whileHover={{ y: -4 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className="bg-surface p-8"
@@ -109,6 +110,7 @@ export default function AllstoraCaseStudy() {
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.08 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.03 }}
                 className="rounded-full border border-fg/10 bg-fg/5 px-4 py-1.5 text-xs text-fg/70"

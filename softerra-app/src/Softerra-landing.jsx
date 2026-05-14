@@ -25,12 +25,13 @@ export default function SofterraLanding() {
   return (
     <div
       className="min-h-screen bg-bg text-fg"
-      style={{ fontFamily: "'Inter', -apple-system, system-ui, sans-serif" }}
+      style={{ fontFamily: "'Plus Jakarta Sans', -apple-system, system-ui, sans-serif" }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
         body { background: var(--bg); }
-        .font-serif { font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif; }
+        /* Display / heading style — kept the .font-serif name to avoid renaming across files */
+        .font-serif { font-family: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif; font-weight: 600; }
         ::selection { background: rgba(107, 91, 255, 0.4); color: white; }
         html { scroll-behavior: smooth; }
       `}</style>

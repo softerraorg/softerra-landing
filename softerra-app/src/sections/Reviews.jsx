@@ -7,7 +7,7 @@ export default function Reviews() {
     { stars: 5, quote: "Excellent Shopify developer. Handled complete theme customizations and product page builds with no handholding needed. Will definitely be coming back for more work.", author: "Verified Client", location: "Europe" },
   ];
   return (
-    <section id="reviews" className="relative py-32">
+    <section id="reviews" className="relative py-20">
       <div className="mx-auto max-w-7xl px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
           <div className="mb-4 text-xs uppercase tracking-[0.3em] text-[#8B7BFF]">Client reviews</div>
@@ -20,9 +20,10 @@ export default function Reviews() {
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="group relative rounded-2xl border border-fg/10 bg-fg/[0.02] p-8 transition-all hover:border-[#6B5BFF]/30 hover:bg-[#6B5BFF]/[0.03]"
+              className="group relative rounded-2xl border border-fg/10 bg-fg/[0.02] p-8 transition-colors hover:border-[#6B5BFF]/30 hover:bg-[#6B5BFF]/[0.03]"
             >
               <div className="mb-6 flex gap-0.5 text-[#8B7BFF]">
                 {Array.from({ length: r.stars }).map((_, j) => (
