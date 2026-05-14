@@ -65,7 +65,7 @@ export default function SelectedWork() {
           </p>
         </motion.div>
 
-        <div className="space-y-6">
+        <div className="grid gap-6 md:grid-cols-2">
           {projects.map((p, i) => (
             <motion.div
               key={p.name}
@@ -73,13 +73,13 @@ export default function SelectedWork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: i * 0.05 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10"
             >
-              <div className={`relative bg-gradient-to-br ${p.gradient} p-12 md:p-16`}>
+              <div className={`relative bg-gradient-to-br ${p.gradient} p-8 md:p-10`}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="relative z-10">
                   <motion.div
-                    className="font-serif text-6xl italic text-white/80 md:text-8xl"
+                    className="font-serif text-4xl italic text-white/80 md:text-5xl"
                     style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     whileHover={{ x: 10 }}
                     transition={{ type: "spring", stiffness: 200 }}
@@ -88,13 +88,13 @@ export default function SelectedWork() {
                   </motion.div>
                 </div>
               </div>
-              <div className="bg-[#0a0a0f] p-8">
+              <div className="flex flex-1 flex-col bg-[#0a0a0f] p-6">
                 <div className="mb-2 text-xs uppercase tracking-[0.2em] text-[#8B7BFF]/70">
                   {p.name} · Case
                 </div>
-                <h3 className="mb-3 text-2xl text-white">{p.subtitle}</h3>
-                <p className="mb-6 max-w-3xl text-sm leading-relaxed text-white/50">{p.desc}</p>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="mb-3 text-xl text-white">{p.subtitle}</h3>
+                <p className="mb-6 text-sm leading-relaxed text-white/50">{p.desc}</p>
+                <div className="mt-auto flex flex-wrap gap-2">
                   {p.tags.map((t) => (
                     <span key={t} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/60">
                       {t}

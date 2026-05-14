@@ -6,7 +6,7 @@ import Nav from "./sections/Nav";
 import Hero from "./sections/Hero";
 import Stats from "./sections/Stats";
 import Services from "./sections/Services";
-import AllstoraCaseStudy from "./sections/AllStoraCaseStudy";
+// import AllstoraCaseStudy from "./sections/AllStoraCaseStudy";
 import SelectedWork from "./sections/SelectedWork";
 import TechStack from "./sections/TechStack";
 import Reviews from "./sections/Reviews";
@@ -39,7 +39,7 @@ export default function SofterraLanding() {
       <Hero />
       <Stats />
       <Services />
-      <AllstoraCaseStudy />
+      {/* <AllstoraCaseStudy /> */}
       <SelectedWork />
       <TechStack />
       <Reviews />
