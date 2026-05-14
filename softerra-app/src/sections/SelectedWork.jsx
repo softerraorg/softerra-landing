@@ -4,6 +4,13 @@ import { motion } from "framer-motion";
 export default function SelectedWork() {
   const projects = [
     {
+      name: "Allstora",
+      subtitle: "Full-Stack Marketplace Engineering",
+      desc: "A community-driven books marketplace engineered end to end. Not a Shopify theme but a fully custom Next.js application that uses Shopify as a commerce engine while keeping its own Supabase database, with ongoing work across chat, fulfillment routing, and curation tooling.",
+      tags: ["Full Stack", "Next.js", "Supabase", "AWS"],
+      gradient: "from-[#3d2e9c] via-[#5b4bcf] to-[#3d2e9c]",
+    },
+    {
       name: "HercLéon",
       subtitle: "Invite-Only Membership & Referral System",
       desc: "An invite-only, tiered membership experience with a built-in Godfather Code referral mechanism. It controls who gets access, unlocks member tiers, and turns existing customers into a growth channel.",
