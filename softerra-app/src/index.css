@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+/* ---- Theme tokens: light is the :root default, .dark overrides ---- */
+:root {
+  --bg: #f4f4f6;
+  --surface: #ffffff;
+  --surface-2: #ebebef;
+  --fg: #0a0a0f;
+}
+
+.dark {
+  --bg: #0a0a0f;
+  --surface: #0a0a0f;
+  --surface-2: #16131f;
+  --fg: #ffffff;
+}
+
+/* Map tokens to Tailwind color utilities (bg-bg, bg-surface, text-fg, ...).
+   `inline` keeps them referencing the live CSS variable, so they react
+   instantly when the .dark class is toggled. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+}
+
+body {
+  background: var(--bg);
+}
