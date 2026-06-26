@@ -48,7 +48,7 @@ export default function Hero() {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="mt-10 max-w-xl text-base leading-relaxed text-fg/60"
         >
-          Softerra is a six person development team based in Islamabad. We work with direct to consumer brands across the United States and Europe on custom themes. Conversion focused development. Full stack engineering for platforms like Allstora.
+          Softerra is a development team. We work with direct to consumer brands across the United States and Europe on custom themes. Conversion focused development. Full stack engineering for platforms like Allstora.
         </motion.p>
 
         <motion.div

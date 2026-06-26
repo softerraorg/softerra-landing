@@ -18,7 +18,7 @@ export default function Footer() {
             <span className="text-[#6B5BFF]">.</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-fg/40">
-            A six person Shopify development team based in Islamabad. Top Rated Plus on Upwork with a 99 percent job success score and over 500 completed projects.
+            A Shopify development team. Top Rated Plus on Upwork with a 99 percent job success score and over 500 completed projects.
           </p>
         </motion.div>
         <motion.div variants={fadeUp} transition={{ duration: 0.5 }}>
@@ -48,7 +48,7 @@ export default function Footer() {
         className="mx-auto mt-12 flex max-w-7xl items-center justify-between border-t border-fg/5 px-8 pt-8 text-xs text-fg/30"
       >
         <div>© 2026 Softerra. All rights reserved.</div>
-        <div>Islamabad · Pakistan</div>
+        <div>Pakistan</div>
       </motion.div>
     </footer>
   );
