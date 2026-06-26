@@ -15,7 +15,10 @@
       "PowerShell(Get-Process node,esbuild -ErrorAction SilentlyContinue)",
       "PowerShell(Stop-Process -Force)",
       "PowerShell(\"node/esbuild stopped \\(if any were running\\)\")",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(git push *)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)"
     ]
   }
 }
