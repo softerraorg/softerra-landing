@@ -1,0 +1,39 @@
+name: Build and Deploy to Hostinger
+
+# Runs every time you push to the main branch
+on:
+  push:
+    branches: [main]
+  # Lets you trigger it manually from the GitHub "Actions" tab too
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Upload dist/ to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # The compiled site lives in dist/ after the build step
+          local-dir: ./dist/
+          # Where it lands on Hostinger. For your PRIMARY domain this is
+          # /public_html/. For an addon domain use /domains/yourdomain.com/public_html/
+          server-dir: /public_html/
