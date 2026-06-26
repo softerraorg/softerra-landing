@@ -28,7 +28,7 @@ export default function SofterraLanding() {
       style={{ fontFamily: "'Plus Jakarta Sans', -apple-system, system-ui, sans-serif" }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
         body { background: var(--bg); }
         /* Display / heading style — kept the .font-serif name to avoid renaming across files */
         .font-serif { font-family: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif; font-weight: 600; }

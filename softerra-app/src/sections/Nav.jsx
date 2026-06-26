@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ThemeToggle from "../components/ThemeToggle";
 
+const LINKS = ["Services", "Work", "Case Studies", "Reviews"];
+
 // ---------- Nav ----------
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,16 +22,22 @@ export default function Nav() {
         scrolled ? "backdrop-blur-xl bg-bg/70 border-b border-fg/5" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
-        <div className="flex items-baseline gap-1 font-serif text-2xl tracking-tight">
-          <span className="text-fg">Softerra</span>
-          <span className="text-[#6B5BFF]">.</span>
-        </div>
-        <div className="hidden gap-10 text-sm tracking-wide text-fg/60 md:flex">
-          {["Services", "Work", "Case Study", "Reviews"].map((item) => (
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
+        {/* Logo — Instrument Serif italic */}
+        <a
+          href="#"
+          className="text-[28px] italic leading-none tracking-[-0.02em] text-fg"
+          style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
+        >
+          Softerra.
+        </a>
+
+        {/* Centered nav links */}
+        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 text-sm text-fg/70 md:flex">
+          {LINKS.map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
               className="group relative transition-colors hover:text-fg"
             >
               {item}
@@ -37,16 +45,18 @@ export default function Nav() {
             </a>
           ))}
         </div>
+
+        {/* Right cluster — CTA then theme toggle (Figma order) */}
         <div className="flex items-center gap-3">
-          <ThemeToggle />
           <motion.a
             href="#contact"
-            whileHover={{ scale: 1.04 }}
+            whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            className="group relative overflow-hidden rounded-full border border-[#6B5BFF]/40 bg-[#6B5BFF]/10 px-5 py-2.5 text-sm text-fg transition-colors hover:bg-[#6B5BFF]/20"
+            className="rounded-full border border-fg/10 bg-gradient-to-b from-fg/[0.06] to-fg/[0.02] px-[18px] py-[11px] text-sm font-medium text-fg transition-colors hover:border-fg/20"
           >
-            <span className="relative z-10">Start a project →</span>
+            Start a project →
           </motion.a>
+          <ThemeToggle />
         </div>
       </div>
     </motion.nav>
