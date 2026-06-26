@@ -4,16 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project layout
 
-The repo root contains two things:
+The Vite + React app lives at the **repo root** (it was previously nested under `softerra-app/`; that folder has been flattened away). `src/` holds the source, and `index.html`, `package.json`, `vite.config.js`, `eslint.config.js`, and `.gitignore` sit at the root. **Run every command from the repo root** — there is no app subfolder anymore.
 
-- **`softerra-app/`** — the actual application (Vite + React). **All development happens here** — `cd softerra-app` before running any command.
-- **`softerra-landing.jsx`** (repo root) — the original pre-refactor *single-file* version of the landing page, kept as reference. It is not imported by the app; the app is the refactored, multi-file version of this same page.
-
-This is not a git repository.
+This is a git repository (remote: `softerraorg/softerra-landing`).
 
 ## Commands
 
-All commands run from `softerra-app/`:
+All commands run from the repo root:
 
 | Command | Purpose |
 |---|---|

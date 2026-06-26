@@ -9,7 +9,13 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5174/)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:5174/src/sections/Hero.jsx\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:5174/src/components/HeroCards.jsx\")",
-      "Bash(curl -s \"http://localhost:5174/src/sections/Hero.jsx\")"
+      "Bash(curl -s \"http://localhost:5174/src/sections/Hero.jsx\")",
+      "Bash(curl -s -o figma-services-dark.png \"https://www.figma.com/api/mcp/asset/a52f3ade-7a2a-453f-8f16-d592863ac5fe\")",
+      "Bash(curl -s -o figma-services-light.png \"https://www.figma.com/api/mcp/asset/6b0fc68d-6b03-47d5-8c6c-637b6a53319a\")",
+      "PowerShell(Get-Process node,esbuild -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force)",
+      "PowerShell(\"node/esbuild stopped \\(if any were running\\)\")",
+      "Bash(npm install *)"
     ]
   }
 }

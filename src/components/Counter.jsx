@@ -1,6 +1,6 @@
  import { useEffect, useRef, useState } from "react";
  import { useInView } from "framer-motion";
-export default function Counter({ value, suffix = "", duration = 1.6 }) {
+export default function Counter({ value, suffix = "", duration = 1.6, className }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
   const [display, setDisplay] = useState(0);
@@ -21,7 +21,7 @@ export default function Counter({ value, suffix = "", duration = 1.6 }) {
   }, [inView, value, duration]);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className={className}>
       {display}
       {suffix}
     </span>
