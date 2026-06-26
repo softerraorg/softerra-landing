@@ -1,7 +1,10 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import Grain from "./components/Grain";
+// Grain removed: its SVG feTurbulence noise filter triggers iOS Safari's
+// fingerprinting protection, which disables the filter and leaves a full-screen
+// black overlay (the "Reduce Protections" banner + washed-out page on iPhone).
+// import Grain from "./components/Grain";
 import Nav from "./sections/Nav";
 import Hero from "./sections/Hero";
 import Stats from "./sections/Stats";
@@ -35,7 +38,7 @@ export default function SofterraLanding() {
         ::selection { background: rgba(107, 91, 255, 0.4); color: white; }
         html { scroll-behavior: smooth; }
       `}</style>
-      <Grain />
+      {/* <Grain /> — disabled: breaks iOS Safari (see import note above) */}
       <Nav />
       <Hero />
       <Stats />
