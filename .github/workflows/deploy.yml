@@ -37,4 +37,4 @@ jobs:
           # Where it lands on Hostinger. For your PRIMARY domain this is
           # /public_html/. For an addon domain use /domains/yourdomain.com/public_html/
           server-dir: /public_html/
-          ##
+          ###
