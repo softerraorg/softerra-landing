@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(npm run *)",
-      "mcp__claude_ai_Figma__get_metadata"
+      "mcp__claude_ai_Figma__get_metadata",
+      "mcp__claude_ai_Figma__get_screenshot",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(curl -s -o \"C:/Users/Hassan/AppData/Local/Temp/claude/c--Users-Hassan-Downloads-softerra-landing/3593979c-f74a-4c1f-ad78-43220069702b/scratchpad/figma-hero.png\" \"https://www.figma.com/api/mcp/asset/639e53dd-f7c6-44a3-90ff-38c7a548cca3\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5174/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:5174/src/sections/Hero.jsx\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:5174/src/components/HeroCards.jsx\")",
+      "Bash(curl -s \"http://localhost:5174/src/sections/Hero.jsx\")"
     ]
   }
 }
