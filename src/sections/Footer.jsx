@@ -52,4 +52,4 @@ export default function Footer() {
       </motion.div>
     </footer>
   );
-}
+} 
