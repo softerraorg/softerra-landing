@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "../lib/no-motion";
 import MagneticButton from "../components/MagneticButton";
 
 export default function CTA() {

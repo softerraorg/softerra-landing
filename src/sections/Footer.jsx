@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "../lib/no-motion";
 import { fadeUp, stagger } from "../lib/motion";
 
 // ---------- Footer ----------

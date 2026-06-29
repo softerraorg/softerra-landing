@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "../lib/no-motion";
 import { useRef } from "react";
 import Aurora from "../components/Aurora";
 import HeroCards from "../components/HeroCards";

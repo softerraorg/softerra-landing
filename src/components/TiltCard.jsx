@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "../lib/no-motion";
 
 // Tilts its children in 3D toward the cursor.
 // IMPORTANT: the PARENT element must set a `perspective`

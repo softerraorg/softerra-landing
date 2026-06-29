@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "../lib/no-motion";
 export default function Aurora() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">

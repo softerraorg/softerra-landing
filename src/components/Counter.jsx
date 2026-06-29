@@ -1,5 +1,5 @@
  import { useEffect, useRef, useState } from "react";
- import { useInView } from "framer-motion";
+ import { useInView } from "../lib/no-motion";
 export default function Counter({ value, suffix = "", duration = 1.6, className }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });

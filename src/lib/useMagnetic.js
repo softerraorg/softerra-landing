@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useMotionValue, useSpring } from "framer-motion";
+import { useMotionValue, useSpring } from "./no-motion";
 
 // Pulls an element gently toward the cursor while hovered, then springs back
 // to center on leave. Returns a ref + springy x/y motion values + handlers.

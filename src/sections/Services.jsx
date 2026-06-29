@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "../lib/no-motion";
 
 const MONO = { fontFamily: "'JetBrains Mono', ui-monospace, monospace" };
 

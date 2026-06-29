@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "../lib/no-motion";
 import ThemeToggle from "../components/ThemeToggle";
 
 const LINKS = ["Services", "Work", "Case Studies", "Reviews"];

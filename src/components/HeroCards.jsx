@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "../lib/no-motion";
 
 // These two panels are intentionally dark in BOTH themes — they read as
 // terminal / code chrome (like a real editor), so they use hardcoded colors

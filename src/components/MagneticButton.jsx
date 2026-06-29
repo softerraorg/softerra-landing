@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "../lib/no-motion";
 import { useMagnetic } from "../lib/useMagnetic";
 
 // An <a> link that drifts toward the cursor on hover. Use for primary CTAs
