@@ -1,16 +1,21 @@
-# React + Vite
+# Softerra Landing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing landing page for Softerra. Built with **Next.js 15 (App Router)**, React 19, and Tailwind CSS v4. Deployed on **Vercel**.
 
-Currently, two official plugins are available:
+## Commands
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+All commands run from the repo root:
 
-## React Compiler
+| Command | Purpose |
+|---|---|
+| `npm run dev` | Start the dev server (http://localhost:3000) |
+| `npm run build` | Production build (`next build`) |
+| `npm run start` | Serve the production build locally (run `build` first) |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project layout
 
-## Expanding the ESLint configuration
+- `app/` — App Router entry: `layout.jsx`, `page.jsx`, `globals.css`
+- `src/` — component library (`sections/`, `components/`, `lib/`) and the `Softerra-landing.jsx` composition root
+- `public/` — static assets served at the site root
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+See [CLAUDE.md](CLAUDE.md) for architecture, theming conventions, and gotchas.
