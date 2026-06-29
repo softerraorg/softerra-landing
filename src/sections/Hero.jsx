@@ -33,7 +33,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={ref} className="relative flex min-h-screen items-center overflow-hidden">
+    <section ref={ref} className="relative flex min-h-svh items-center overflow-hidden">
       <Aurora />
       <div className="relative z-10 mx-auto w-full max-w-7xl px-8 pt-32 pb-24">
         <motion.div
